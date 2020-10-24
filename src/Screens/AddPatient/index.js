@@ -59,13 +59,13 @@ export default function AddPatient() {
                                 <div className="form-group" required>
                                     <label>Gender: </label>
                                     <div className="radio">
-                                        <label><input type="radio" className="mr-3" value="Male" name="gender" id="gender" checked onChange={handleFieldChange} />Male</label>
+                                        <label><input type="radio" className="mr-3" value="Male" name="gender" id="gender" checked={fields.gender === "Male"} onChange={handleFieldChange} />Male</label>
                                     </div>
                                     <div className="radio">
-                                        <label><input type="radio" className="mr-3" value="Female" name="gender" id="gender" onChange={handleFieldChange} />Female</label>
+                                        <label><input type="radio" className="mr-3" value="Female" name="gender" id="gender" checked={fields.gender === "Female"} onChange={handleFieldChange} />Female</label>
                                     </div>
                                     <div className="radio">
-                                        <label><input type="radio" className="mr-3" value="other" name="gender" id="gender" onChange={handleFieldChange} />Prefer Not to Say</label>
+                                        <label><input type="radio" className="mr-3" value="other" name="gender" id="gender" checked={fields.gender === "other"} onChange={handleFieldChange} />Prefer Not to Say</label>
                                     </div>
                                 </div>
                                 <button type="submit" className="btn btn-info w-100">Add Patient</button>

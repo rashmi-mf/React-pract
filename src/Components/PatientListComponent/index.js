@@ -8,17 +8,20 @@ export default function PatientListComponent(props) {
 
     const dispatch = useDispatch();
 
+    let [dataSorted, setDataSorted] = useState(false)
+
     let patient = useSelector((state) => state.patient);
 
-    let data = (props.data) ? props.data : patient;
+    let data = (props.data) ? props.data : patient; // Condtion to add the live search in the list view
 
     const patientData = Object.values(data);
 
+    // Definations for pagination
     const patientPerPage = 7;
     const [activePage, setCurrentPage] = useState(1);
-
     const indexOfLastPatient = activePage * patientPerPage;
     const indexOfFirstPatient = indexOfLastPatient - patientPerPage;
+
     const handlePageChange = (pageNumber) => {
         setCurrentPage(pageNumber);
     };
@@ -37,6 +40,7 @@ export default function PatientListComponent(props) {
                 return (x < y) ? -1 : ((x > y) ? 1 : 0)
             })
             dispatch(sortPatient(results));
+            setDataSorted(true);
         }
     };
 
@@ -60,7 +64,7 @@ export default function PatientListComponent(props) {
                                         <table className="table table-striped">
                                             <thead>
                                                 <tr className="text-center">
-                                                    <th scope="col">Name  <i className="fa fa-sort ml-3" onClick={() => sortByTitle('name')} ></i></th>
+                                                    <th scope="col">Name  <i className="fa fa-sort ml-3" disabled={dataSorted} onClick={() => sortByTitle('name')} ></i></th>
                                                     <th scope="col">Email</th>
                                                     <th scope="col">Age</th>
                                                     <th scope="col">Gender</th>
