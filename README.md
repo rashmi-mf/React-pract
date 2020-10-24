@@ -1,3 +1,15 @@
+# Instructions To Check-
+
+ 1- Clone the app and do 'npm install'
+ 2- Once the dependencies are intsalled, you will be redirected to login page on localhost:3000
+ 3- Login with any credentials
+ 4- Without login you can not access dashboard or any other routes
+ 5- Once logged in you will be redirected to dashboard page
+ 6- You can 'Add Patient' & 'View Patient' by clicking on the navigation bar
+ 7- All the actions performed will will be stored in REDUX store, So please don't refresh the page.
+ 8- You check routes by clicking and navigating through link, and to check public private routes working I have added 'Sign Out' button as well for you convinence 
+ 9- Please note the branch should be 'master'
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

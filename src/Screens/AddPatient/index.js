@@ -28,6 +28,7 @@ export default function AddPatient() {
         setAdded(true);
     }
 
+    // For resetting back data to initial
     const goBack = () => {
         setAdded(false);
         handleFieldChange('reset')

@@ -1,4 +1,4 @@
-// This is a custome hooks for managing data in application
+// This is a custome hooks for managing data in application from one place
 
 import { useState } from "react";
 
@@ -13,6 +13,7 @@ export function useFormFields(initialState) {
                     [event.target.id]: event.target.value
                 });    
             } else if (event === "reset") {
+                // For resetting back data to initial
                 setValues(initialState);  
             }   
         }
