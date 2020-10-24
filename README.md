@@ -1,4 +1,4 @@
-# Instructions To Check-
+# Instructions To getting Started-
 
  1- Clone the app and do 'npm install'\
  2- Once the dependencies are intsalled, you will be redirected to login page on localhost:3000\
