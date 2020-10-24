@@ -22,6 +22,7 @@ export default function Header(props) {
             {/* Header Navigation Section */}
             <header className="header mb-5 pb-4">
                 <nav className="bg-info fixed-top navbar navbar-expand-lg">
+                    <span className="navbar-brand Sitelogo font-weight-bold text-light" onClick={() => navigateFun("dashboard")}>DoctorPortal</span>
                     <button type="button" name="toggler_btn" id="toggler_btn" className="navbar-toggler navbar-light" data-toggle="collapse" data-target="#header-nav">
                         <span className="navbar-toggler-icon"></span>
                     </button>
