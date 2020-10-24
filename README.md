@@ -8,7 +8,7 @@
  6- You can 'Add Patient' & 'View Patient' by clicking on the navigation bar\
  7- All the actions performed will will be stored in REDUX store, So please don't refresh the page.\
  8- You check routes by clicking and navigating through link, and to check public private routes\ working I have added 'Sign Out' button as well for you convinence \
- 9- Please note the branch should be 'master'\
+ 9- Please note the branch should be 'master'
 
 # Getting Started with Create React App
 
